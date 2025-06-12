@@ -1,0 +1,6 @@
+.env
+pandaio/__pycache__
+pandaio/routes/__pycache__
+pandaio/database.db
+.vscode
+database.db
