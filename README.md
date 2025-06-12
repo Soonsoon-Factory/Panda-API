@@ -17,6 +17,14 @@
   <span style="color:#56B16F">OpenAI · DeepSeek 다양한 AI 기능 지원</span>
 </p>
 
+## ✨ 프로젝트 소개 (About The Project)
+
+PandaAPI는 복잡한 클라우드 기반 AI 서비스를 하나의 API로 통합하여, 누구나 손쉽게 사용할 수 있도록 만들어진 서비스입니다. 특히 **학생이나 아마추어 개발자들이 여러 AI를 재미있고 간편하게 테스트하며 자신만의 프로젝트를 만들어 볼 수 있는 개발 환경을 제공하는 것**을 목표로 합니다.
+
+각기 다른 인증 방식과 엔드포인트를 신경 쓸 필요 없이, PandaAPI가 발급하는 단일 API Key와 표준화된 요청 형식으로 다양한 최신 AI 모델을 손쉽게 사용할 수 있습니다.
+
+
+
 
 ## 🚀 주요 기능
 
@@ -53,8 +61,20 @@ PandaAPI/
 - **필수 패키지:** fastapi, uvicorn, httpx, python-dotenv, sqlalchemy, databases
 
 
+## ✅ 지원하는 서비스 (Supported Services)
 
+> [!NOTE]
+> 현재 PandaAPI는 **Azure**를 통해 배포된 AI 모델의 엔드포인트를 사용하는 것을 기준으로 제작되었습니다.
 
+### 현재 지원
+* **Azure OpenAI Service**
+* **Azure DeepSeek Service**
+
+### 향후 지원 예정
+* Amazon Web Services (AWS) Bedrock
+* 기타 클라우드 기반 AI 서비스
+
+---
 
 <br>
 
@@ -93,13 +113,13 @@ DEEPSEEK_V3_ENDPOINT=https://your-deepseek-endpoint.azure.com/openai/deployments
 > [!TIP]  
 > deployments 부분만 변경되는 것이기에, 코드에서 수정하면 `.env` 등록을 줄일 수 있습니다. 
 
-### 2. 요구사항 설치
+### 3. 요구사항 설치
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. 로컬 서버 실행
+### 4. 로컬 서버 실행
 현재 `pandaio/main.py`의 코드를 확인하면 로컬 테스트와 배포가 따로 있는 것을 확인할 수 있습니다. 만일 서버에 배포하려고 하는 경우, 로컬 테스트용을 주석처리하고 배포용 부분을 사용하면 됩니다. 
 ```python
 # 로컬 테스트용 uvicorn main:app --reload
@@ -182,11 +202,19 @@ curl -X POST http://127.0.0.1:8000/api/process/ \
 
 ---
 
+## ✍️ 제작자 (Author)
+
+이 프로젝트는 **[SOONSOO FACTORY](https://soonsoons.com) 의 아카데미 멘토링 프로그램** 의 스터디 일환으로 제작되었습니다.
+
+* **이름:** 이소연 (Lee Soyeon)
+* **소속:** 동국대학교 컴퓨터공학부 4학년
+* **이메일:** <panda_g02@naver.com>
+
 
 
 <p align="center">
   <sub>
-    PandaAPI · Powered by FastAPI · OpenAI · DeepSeek <br/>
+    PandaAPI · Powered by FastAPI <br/>
     Support: panda_g02@naver.com
   </sub>
 </p>
